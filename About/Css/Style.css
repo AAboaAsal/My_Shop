@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+:root {
+    --main-color :#8f289c;
+    --background-sec-col:#dce2e2;
+    --hover:#651d6e;
+    --section-border:rgb(226, 226, 226);
+}
+.special-hr {
+    display: inline-block;
+    width: 30px;
+    border-color: var(--main-color);
+    height: 1px;
+    background-color: #8f289c;
+}
+.special-hr + h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.button {
+    width: fit-content;
+    transition: all .1s ease;
+    margin-top: 30px;
+}
+.button:hover {
+    transform:translate(0px , -2px) ;
+    transition: all .1s ease;
+}
+.button a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    border-radius: 5px;
+}
+.button a:hover {
+    background-color: var(--hover);
+    box-shadow: 1px 1px 5px 1px #00000096
+}
+.button-1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Start Header */
+header {
+    background-color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 25px;
+    margin-bottom: 30px;
+}
+header nav .search {
+    width: 200px;
+    position: relative;
+    font-size: 15px;
+}
+header nav .search i {
+    position: absolute;
+    top: 2px;
+    left:0;
+    color: rgb(105, 105, 105);
+}
+header nav .search input {
+    padding-left: 30px;
+    border: none;
+    color: rgb(105, 105, 105);
+}
+header nav .search input:focus {
+    outline: none;
+}
+header nav .name {
+    margin-right: 120px;
+}
+header nav .name p {
+    margin: 0;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 3px 10px;
+    font-size: 20px;
+}
+header nav .icon {
+    position: relative;
+}
+header nav .icon i {
+    color: rgb(105, 105, 105);
+    margin-right: 10px;
+    font-size: 15px;
+}
+header nav .icon i:hover {
+    color: var(--main-color);
+}
+header nav .icon span {
+    position: absolute;
+    right: -8px;
+    top: -16px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 1px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+header hr {
+    border: 1px solid #0000000f ;
+}
+header .links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+header .links ul li {
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+header .links ul li:nth-child(2) a {
+    color: var(--main-color);
+}
+header .links ul li a {
+    text-decoration: none;
+    color:  rgb(85, 84, 84);
+    font-size: 15px;
+    position: relative;
+    font-weight: bold;
+}
+header .links ul li a:hover {
+    color: var(--main-color);
+}
+header .links ul li .after:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: -14px;
+    width: 0px;
+    height: 0px;
+    color: rgb(85, 84, 84);
+    border-width: 5px 5px 5px 5px;
+    border-color: rgb(85, 84, 84) transparent transparent transparent;
+    border-style: solid solid solid solid;
+    transition-delay: .3s;
+    margin-left: 3px;
+}
+header .links ul li .after:after:hover {
+    border-color: var(--main-color);
+}
+/* End Header */
+/* Start starting */
+.starting {
+    padding: 50px 80px;
+}
+.starting .sale {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 50px;
+}
+.starting .sale .image {
+    width:800px;
+    position: relative;
+}
+.starting .sale .image span {
+    position: absolute;
+    background-color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top:135px;
+    left: 225px;
+
+}
+.starting .sale .image img {
+    width: 100%;
+}
+.starting .sale .text {
+    width: 900px;
+}
+.starting .sale .text h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.starting .sale .text p {
+    color: #8a8a8a;
+    line-height: 1.7;
+}
+
+/* End starting */
+/* Start the Team */
+.the-team {
+    text-align: center;
+    padding: 50px 80px;
+    margin-top: 40px;
+    border-top: 1px solid var(--section-border);
+    border-bottom: 1px solid var(--section-border);
+}
+.the-team .team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    margin-top: 40px;
+}
+.the-team .team img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+.the-team .team div h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.the-team .team div span {
+    font-size: 15px;
+    color: #969696;
+}
+.the-team .team div p {
+    line-height: 1.6;
+    color: #6b6b6b;
+}
+/* End the Team */
+/* Start Categories */
+.categories {
+    padding: 80px 80px;
+}
+.categories .category {
+    display: flex;
+    justify-content: space-between;
+}
+.categories .category .catego {
+    display: flex;
+    width: 400px;
+}
+.categories .category .catego i {
+    font-size: 35px;
+    flex: 1;
+    margin-top: 3px;
+    color: var(--main-color);
+}
+.categories .category .catego div {
+    margin-left: 25px;
+}
+.categories .category .catego div h2 {
+    margin-top: 0;
+    font-weight: 500;
+}
+.categories .category .catego div p {
+    line-height: 1.7;
+    color: #5e5e5e;
+}
+/* End Categories */
+/* Start Footer */
+footer {
+    border-top:1px solid var(--section-border) ;
+    padding-top: 30px;
+}
+footer .information {
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+}
+footer .information .inform h4 {
+    margin: 0;
+}
+footer .information .inform p {
+    margin-top: 30px;
+    color: #747474;
+}
+footer .information .mob {
+    margin-top: 20px;
+}
+footer .information .point {
+    margin-top: 20px;
+}
+footer .information .promo {
+    width: 20%;
+}
+footer .information .promo a {
+    text-decoration: none;
+    color: #8f289c;
+    font-size: 17px;
+}
+footer .information .promo a:hover {
+    color: var(--hover);
+}
+footer .information .promo p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+footer .information .contact {
+    width: 400px;
+}
+footer .information .contact h2 {
+    margin-top: 40px;
+}
+footer .information .contact .input form {
+    position: relative;
+    width: 250px;
+}
+footer .information .contact .input form input[type="email"] {
+    padding: 11px;
+    color: #8f289c;
+    border: 1px solid #8f289c;
+    outline: none;
+    width: 100%;
+}
+footer .information .contact .input form input[type="submit"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 10px;
+    background-color: #8f289c;
+    color: white;
+    border: 1px solid #8f289c;
+}
+footer .information .contact .input form input[type="submit"]:hover {
+    background-color:var(--hover);
+    cursor: pointer;
+    border: 1px solid var(--hover);
+}
+footer .information .contact .icon {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+footer .information .contact .icon i {
+    color: #8f289c;
+}
+footer .information .contact .icon p {
+    margin: 0 10px;
+}
+footer .information .nav {
+    margin-left: 80px;
+}
+footer .information .promo img{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+footer .foot {
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212529;
+    text-align: center;
+}
+footer span {
+    color: var(--main-color);
+    font-size: 17px;
+}
+/* End Footer */

@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+:root {
+    --main-color :#8f289c;
+    --background-sec-col:#dce2e2;
+    --hover:#651d6e;
+    --section-border:rgb(226, 226, 226);
+}
+.special-hr {
+    display: inline-block;
+    width: 30px;
+    border-color: var(--main-color);
+    height: 1px;
+    background-color: #8f289c;
+}
+.special-hr + h2 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+/* Start Header */
+header {
+    background-color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 25px;
+    margin-bottom: 30px;
+}
+header nav .search {
+    width: 200px;
+    position: relative;
+    font-size: 15px;
+}
+header nav .search i {
+    position: absolute;
+    top: 2px;
+    left:0;
+    color: rgb(105, 105, 105);
+}
+header nav .search input {
+    padding-left: 30px;
+    border: none;
+    color: rgb(105, 105, 105);
+}
+header nav .search input:focus {
+    outline: none;
+}
+header nav .name {
+    margin-right: 120px;
+}
+header nav .name p {
+    margin: 0;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 3px 10px;
+    font-size: 20px;
+}
+header nav .icon {
+    position: relative;
+}
+header nav .icon i {
+    color: rgb(105, 105, 105);
+    margin-right: 10px;
+    font-size: 15px;
+}
+header nav .icon i:hover {
+    color: var(--main-color);
+}
+header nav .icon span {
+    position: absolute;
+    right: -8px;
+    top: -16px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 1px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+header hr {
+    border: 1px solid #0000000f ;
+}
+header .links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+header .links ul li {
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+header .links ul li:nth-child(3) a {
+    color: var(--main-color);
+}
+header .links ul li a {
+    text-decoration: none;
+    color:  rgb(85, 84, 84);
+    font-size: 15px;
+    position: relative;
+    font-weight: bold;
+}
+header .links ul li a:hover {
+    color: var(--main-color);
+}
+header .links ul li .after:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: -14px;
+    width: 0px;
+    height: 0px;
+    color: rgb(85, 84, 84);
+    border-width: 5px 5px 5px 5px;
+    border-color: rgb(85, 84, 84) transparent transparent transparent;
+    border-style: solid solid solid solid;
+    transition-delay: .3s;
+    margin-left: 3px;
+}
+header .links ul li .after:after:hover {
+    border-color: var(--main-color);
+}
+header .sec-name {
+    padding: 10px 80px;
+    background-color:var(--background-sec-col);
+}
+header .sec-name p {
+    font-weight: bold;
+    font-size: 17px;
+}
+header .sec-name p span {
+    color: var(--main-color);
+}
+/* End Header */
+/* Start Products */
+.products {
+    background-color: white;
+    padding: 30px 80px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+.products .control .category {
+    border: 1px solid var(--main-color);
+    padding: 15px;
+    width: 250px;
+    box-shadow: -2px 2px 7px -6px black, 2px -2px 7px -6px black;
+}
+.products .control .category h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+.products .control .category div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products .control .category div p:first-child {
+    color: var(--main-color);
+}
+.products .control .category div p {
+    font-size: 15px;
+    color: rgb(105, 105, 105)
+}
+.products .control .price {
+    border: 1px solid var(--main-color);
+    padding: 15px;
+    width: 250px;
+    margin-top: 30px;
+    box-shadow: -2px 2px 7px -6px black, 2px -2px 7px -6px black;
+}
+.products .control .price .filter p {
+    margin: 0;
+    font-size: 12px;
+}
+.products .control .price .color p {
+    position: relative;
+    margin-left: 10px;
+}
+.products .control .price .color .red::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: red;
+    border-radius: 50%;
+}
+.products .control .price .color .green::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: green;
+    border-radius: 50%;
+}
+.products .control .price .color .blue::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: blue;
+    border-radius: 50%;
+}
+.products .control .price .color .purple::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    background-color: purple;
+    border-radius: 50%;
+}
+.products .photo-sec {
+    width: 100%;
+}
+.products .photo-sec .head {
+    display: flex;
+    justify-content: space-between;
+}
+.products .photo-sec .head h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.products .photo-sec .select select {
+    background-color: var(--background-sec-col);
+    padding: 5px;
+    margin-right: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 10px -3px black;
+    box-shadow: 0px 1px 6px -3px black;
+    transition: all .1s ease-in-out;
+}
+.products .photo-sec .select select:hover {
+    box-shadow: 0px 4px 10px -3px black;
+    transform: translate(-2px , -2px);
+    cursor: pointer;
+}
+.products .photo-sec .photos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.products .photo-sec .photos .ph1 div {
+    width:270px;
+    height: 350px;
+    text-align: center;
+    box-shadow:  5px 5px 13px -13px black , -5px -5px 13px -13px black;
+    margin-bottom: 40px;
+}
+.products .photo-sec .photos .ph1 div img {
+    width: 100%;
+    height: 60%;
+
+}
+.products .photo-sec .photos .ph1 div h5 {
+    font-size: 16px;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.products .photo-sec .photos .ph1 div p {
+    margin:10px 0;
+    color: #b6b6b6;
+}
+.products .photo-sec .photos .ph1 div span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End Products */
+/* Start Categories */
+.categories {
+    padding: 30px 80px;
+    text-align: center;
+}
+.categories .category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.categories .category .catego {
+    width: calc(100%/3);
+    position: relative;
+    overflow: hidden;
+}
+.categories .category .catego div {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    z-index: 40;
+    color: rgb(255, 255, 255);
+    width: 50px;
+}
+.categories .category img {
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease;
+}
+img , svg {
+    vertical-align: middle;
+}
+.categories .category .catego img:hover {
+    transform:scale(1.1);
+    transition: all .4s ease;
+}
+/* End Categories */
+/* Start Footer */
+footer {
+    margin-top: 40px;
+    border-top: 1px  solid var(--section-border);
+}
+footer .information {
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+}
+footer .information .inform h4 {
+    margin: 0;
+}
+footer .information .inform p {
+    margin-top: 30px;
+    color: #747474;
+}
+footer .information .mob {
+    margin-top: 20px;
+}
+footer .information .point {
+    margin-top: 20px;
+}
+footer .information .promo {
+    width: 20%;
+}
+footer .information .promo a {
+    text-decoration: none;
+    color: #8f289c;
+    font-size: 17px;
+}
+footer .information .promo a:hover {
+    color: var(--hover);
+}
+footer .information .promo p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+footer .information .contact {
+    width: 400px;
+}
+footer .information .contact h2 {
+    margin-top: 40px;
+}
+footer .information .contact .input form {
+    position: relative;
+    width: 250px;
+}
+footer .information .contact .input form input[type="email"] {
+    padding: 11px;
+    color: #8f289c;
+    border: 1px solid #8f289c;
+    outline: none;
+    width: 100%;
+}
+footer .information .contact .input form input[type="submit"] {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 10px;
+    background-color: #8f289c;
+    color: white;
+    border: 1px solid #8f289c;
+}
+footer .information .contact .input form input[type="submit"]:hover {
+    background-color:var(--hover);
+    cursor: pointer;
+    border: 1px solid var(--hover);
+}
+footer .information .contact .icon {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+footer .information .contact .icon i {
+    color: #8f289c;
+}
+footer .information .contact .icon p {
+    margin: 0 10px;
+}
+footer .information .nav {
+    margin-left: 80px;
+}
+footer .information .promo img{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+footer .foot {
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212529;
+    text-align: center;
+}
+footer span {
+    color: var(--main-color);
+    font-size: 17px;
+}
+/* End Footer */
